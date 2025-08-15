@@ -1,0 +1,385 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;  
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0 0 10px #1E8449;
+    transform: scale(1.05);  
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2.titulo{
+    color: #E8F5E9;
+    font-size: 33px;
+    text-align: center;
+    margin: 40px 0;
+}
+h2.titulo span{
+    color: #1ABC9C;
+    font-size: 33px;
+}
+
+/* ESTILO DO CABEÇELHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #7a7a7a;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a:hover {
+    color: #E8F5E9;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.topo-do-site h1{
+    color: #E8F5E9;
+    font-size: 28px;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color:#1ABC9C;
+    font-size: 50px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #E8F5E9;
+    margin: 40px 0;
+    font: size 10px;
+}
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: moverimagem 2.3s ease-in-out infinite alternate;
+    border-radius: 1000px;
+}
+    
+@keyframes moverimagem {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+/* ESTILOS DAS ESPECIALIDADES */
+section.Especialidades {
+    padding: 80px 4%;
+    background-color: #0c0c0c;
+}
+
+section.Especialidades .flex {
+    align-items: stretch;
+    margin-top: 60px;
+    gap: 40px; /* Aumentei o gap entre boxes */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Especialidades .especialidade-boxs {
+    color: #f3f3f3;
+    padding: 50px 30px; /* Ajuste balanceado */
+    border-radius: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Valor intermediário */
+    height: 100%;
+}
+
+.Especialidades .especialidade-boxs:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(82, 117, 94, 0.4);
+}
+
+.Especialidades .especialidade-boxs i {
+    font-size: 70px; /* Mantido seu tamanho */
+    color: #1ABC9C;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+.Especialidades .especialidade-boxs h3 {
+    font-size: 24px; /* Aumentei para melhor hierarquia */
+    color: #1ABC9C; /* Adicionei cor para consistência */
+    margin: 0; /* Removi margem fixa para usar gap */
+    flex-shrink: 0;
+}
+
+.Especialidades .especialidade-boxs p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #E8F5E9;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    section.Especialidades {
+        padding: 60px 4%;
+    }
+    
+    section.Especialidades .flex {
+        gap: 30px;
+    }
+    
+    .Especialidades .especialidade-boxs {
+        padding: 40px 20px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 40px 4%;
+
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+section.sobre .txt-sobre h2{
+    color: white;
+    font-size: 40px;
+    line-height: 50px;
+}
+section.sobre .txt-sobre p{
+    color: white;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 20px 0;
+    text-align: justify;
+
+}
+section.sobre .img-sobre img {
+    border-radius: 20px;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
+section.sobre .txt-sobre h2 span{
+    color: #1ABC9C;
+    display: block ;
+}
+/* Container dos botões sociais */
+.sobre .txt-sobre .btn-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Estilo dos botões sociais */
+.btn-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1ABC9C;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    display: horizontal;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Efeito hover dos botões */
+.sobre .txt-sobre .btn-social button:hover {
+    background-color: #16a085;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.4);
+}
+
+/* Estilo dos ícones */
+.sobre .txt-sobre .btn-social i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}   
+/* ESTILO DO PORTIFOLIO */
+
+section.Portifolio {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgb(247, 234, 234);
+
+}
+
+section.Portifolio .flex {
+    gap: 80px;
+    justify-content: space-around
+    
+
+}
+
+.img-portifolio1, .img-portifolio2, .img-portifolio3 {
+    width: 360px;
+    height: 460px;
+    background-color: #1ABC9C;
+    border-style: groove;
+   
+}
+
+/* ESTILO DO FORMULÁRIO */
+section.Formulário {
+    padding: 80px 4%;
+    background-color: #0c0c0c;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+}
+
+form input , form textarea {
+
+    width: 100%;
+    background-color: rgb(73, 72, 72);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+form input::placeholder{
+    color: rgba(101, 107, 225, 0.364);
+    font-size: 15px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 1000px;
+    color: white;
+}
+
+form .btn-enviar {
+    margin-top: 40px;
+    text-align: center;
+    
+    
+}
+form .btn-enviar input[type="submit"]{
+    background-color: #1ABC9C;
+    width: 200px;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+form textarea {
+    min-height: 150px; 
+    height: 150px;
+}
+form textarea::placeholder {
+    color: rgba(101, 107, 225, 0.364); 
+    font-size: 15px;
+} 
+/* ESTILO DO RODAPÉ */
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px rgb(247, 234, 234);
+}
+footer .flex{
+    justify-content: space-between;
+    
+}
+.line-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+
+footer .line-footer p i {
+   font-size: 23px;
+    color: white;
+    
+}
+
+footer .line-footer{
+    
+    border-bottom: 2px solid #1ABC9C;
+    
+
+}
